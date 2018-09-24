@@ -25,12 +25,12 @@ jobs:
             - ~/.cache
       - run:
           name: Running E2E tests with JUnit reporter
-          command: npm run test-junit
+          command: npm run test-junit --record --key 50b30a3e-199f-4ab7-9b1f-494a29dd8c7f
       - store_test_results:
           path: junit-results
       - run:
           name: Running E2E tests with multiple reporters
-          command: npm run test-multiple
+          command: npm run test-multiple --record --key 50b30a3e-199f-4ab7-9b1f-494a29dd8c7f
       - store_test_results:
           path: multiple-results
       - store_artifacts:
